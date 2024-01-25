@@ -11,7 +11,25 @@ const ingredientsListBottom = document.querySelector(
 const ingredientsListBottomP = document.querySelector(
   ".ingredients-list-bottom p"
 );
-const ingredients = document.querySelector(".to-paste")
+const ingredients = document.querySelector(".ingredients-list-paste");
+
+const shadow = document.querySelector(".shadow");
+shadow.style.boxShadow = "0 0 0 0";
+
+const newList = Array.from(ingredients.children);
+newList[2].innerText = "3tsk vaniljsocker";
+
+const newIngredient = document.createElement("li");
+newIngredient.innerText = "400g naturell philadelphiaost";
+
+ingredients.append(newIngredient);
+
+const instructions = document.querySelector(".instructions-list");
+
+newArr = [...instructions.children];
+newArr[1].innerText =
+  "Separera ägggulor och äggvitor. Äggvitorna lägger du i en stor bunke, äggulorna i en liten bunke.";
+newArr[8].innerText = "Ställ in i frysen över natten.";
 
 const listItem1 = document.createElement("li");
 const listItem2 = document.createElement("li");
